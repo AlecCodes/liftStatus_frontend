@@ -1,9 +1,9 @@
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 
-function WeekView(props, {params}){
-    const {dateRange} = useParams()
-    console.log(dateRange)
+function WeekView(props){
+    const {start, end} = useParams()
+    console.log(start, end)
 
     return <h1>WeekView!!</h1>
 }
