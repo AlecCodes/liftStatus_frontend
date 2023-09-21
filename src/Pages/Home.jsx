@@ -11,7 +11,7 @@ function Home(){
         <div className='landingPage'>
             <p>Today's Date: {today.toLocaleDateString()}</p>
 
-            <Link to={`showWeek/${today}/${sevenDaysAgo}`}>SEE LAST WEEK</Link>
+            <Link to={`showWeek/${sevenDaysAgo}/${today}`}>SEE LAST WEEK</Link>
             
         </div>
     )
