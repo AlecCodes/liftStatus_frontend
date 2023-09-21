@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import WeekView from './Pages/WeekView'
 import Header from './Components/Header'
+import {Outlet} from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <Header/>
-      <WeekView/>
+      <Outlet/>
     </>
   )
 }
