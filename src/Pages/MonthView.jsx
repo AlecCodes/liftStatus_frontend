@@ -10,7 +10,7 @@ function MonthView(props){
     const firstDay = daysInMonthList[0].getDay()
     const leadingBlankDays = []
     for (let i = 0; i < firstDay; i++){
-        leadingBlankDays.push(<li></li>)
+        leadingBlankDays.push(<li>&nbsp;</li>)
     }
 
 
