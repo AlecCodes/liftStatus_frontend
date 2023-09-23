@@ -15,7 +15,6 @@ function MonthCalendar(props){
     //We use CSS
     return (
         <>
-            <h1>MONTH VIEW!!</h1>
             <ul className="weekdays">
                 <li>Sun</li>
                 <li>Mon</li>
