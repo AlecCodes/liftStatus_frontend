@@ -1,40 +1,24 @@
 import daysInMonth from "../Functions/daysInMonth"
 import { useParams } from "react-router-dom"
+import MonthCalendar from "../Components/MonthCalendar"
+import { useEffect } from "react"
+import { useState } from "react"
 
 function MonthView(props){
 
-    const {year, month} = useParams()
-    const daysInMonthList = daysInMonth(year, month)
+    const today = new Date()
+    const currentMonth = today.getMonth()
+    const currentYear = today.getFullYear()
+    const [getMonthState, setMonthState] = useState(currentMonth)
+    const [getYearState, setYearState] = useState(currentYear)
+    
 
-    //this aligns the start of the month on the proper day of week on our calendar
-    const firstDay = daysInMonthList[0].getDay()
-    const leadingBlankDays = []
-    for (let i = 0; i < firstDay; i++){
-        leadingBlankDays.push(<li>&nbsp;</li>)
-    }
-
-
-    //We use CSS
     return (
         <>
             <h1>MONTH VIEW!!</h1>
-            <ul className="weekdays">
-                <li>Sun</li>
-                <li>Mon</li>
-                <li>Tue</li>
-                <li>Wed</li>
-                <li>Thu</li>
-                <li>Fri</li>
-                <li>Sat</li>
-            </ul>
-            <ul className="days">
-                {leadingBlankDays}
-                {daysInMonthList.map((date, index) => {
-                    return(<li
-                    key={index}
-                    >{date.toLocaleDateString()}</li>)
-                })}
-            </ul>
+            <i className="arrow left"></i>          
+            <i className="arrow right"></i>
+            <MonthCalendar month = {getMonthState + 1} year ={getYearState}/>
         </>
     )
 }
