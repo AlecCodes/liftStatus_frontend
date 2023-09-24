@@ -12,17 +12,28 @@ function MonthView(props){
     const [getMonthState, setMonthState] = useState(currentMonth+1)
     const [getYearState, setYearState] = useState(currentYear)
 
+    const [getToday, setToday] = useState(today)
+
+
     return (
         <>
             <h1>MONTH VIEW!!</h1>
             <i className="arrow left"
-            onClick={(e) => setMonthState(getMonthState - 1)}
+            onClick = {(e) => {
+                const newDate = new Date(getToday)
+                newDate.setMonth(getToday.getMonth() - 1)
+                setToday(newDate)
+            }}
             ></i>
-            <i>{getMonthState}/{getYearState}</i>          
+            <i>{getToday.toLocaleDateString()}</i>          
             <i className="arrow right"
-            onClick={(e) => setMonthState(getMonthState + 1)}
+            onClick = {(e) => {
+                const newDate = new Date(getToday)
+                newDate.setMonth(getToday.getMonth() + 1)
+                setToday(newDate)
+            }}            
             ></i>
-            <MonthCalendar month = {getMonthState} year ={getYearState}/>
+            <MonthCalendar month = {getToday.getMonth() + 1} year = {getToday.getFullYear()}/>
         </>
     )
 }
