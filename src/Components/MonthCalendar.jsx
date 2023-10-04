@@ -1,4 +1,5 @@
 import daysInMonth from "../Functions/daysInMonth"
+import {Link} from "react-router-dom"
 
 function MonthCalendar(props){
 
@@ -29,7 +30,9 @@ function MonthCalendar(props){
                 {daysInMonthList.map((date, index) => {
                     return(<li
                     key={index}
-                    >{date.toLocaleDateString()}</li>)
+                    >
+                        <Link to={`../showDay/${date.toISOString()}`}>{date.toLocaleDateString()}</Link>
+                    </li>)
                 })}
             </ul>
         </>
