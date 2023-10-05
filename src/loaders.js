@@ -9,3 +9,8 @@ export async function pastWeekLoader({params}){
     return data
 }
 
+export async function dayLoader({params}){
+    const response = await fetch(URI + `/getAllByDate/${params.day}`)
+    const data = await response.json()
+    return data
+}

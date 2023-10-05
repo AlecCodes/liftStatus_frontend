@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom"
+import { useLoaderData } from "react-router-dom"
 
 function DayView(props){
-    const {day} = useParams()
-    console.log(day)
+    const data = useLoaderData()
+    console.log(data)
     return (
         <>
             <h1>DAY VIEW!</h1>

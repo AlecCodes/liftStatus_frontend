@@ -4,7 +4,7 @@ import MonthView from "./Pages/MonthView"
 import Header from "./Components/Header";
 import App from "./App";
 import Home from "./Pages/Home";
-import {pastWeekLoader} from "./loaders"
+import {pastWeekLoader, dayLoader} from "./loaders"
 import DayView from "./Pages/DayView";
 
 
@@ -14,7 +14,7 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route path = "" element={<Home/>}/>
             <Route path = "showWeek/:start/:end" element={<WeekView/>} loader ={pastWeekLoader}/>
             <Route path = "showMonth" element={<MonthView/>} />
-            <Route path = "showDay/:day" element = {<DayView/>}/>
+            <Route path = "showDay/:day" element = {<DayView/>} loader = {dayLoader}/>
         </Route>
     </>
 ))
