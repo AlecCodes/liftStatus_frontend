@@ -1,3 +1,31 @@
+.dayReport {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.Closed{
+  background-color: red;
+}
+
+.Open{
+  background-color: green;
+}
+
+.dayReport th, .dayReport td {
+  border: 1px solid #ccc; /* Add borders to cells */
+  padding: 8px; /* Add padding to cells for spacing */
+  text-align: center; /* Center-align text in cells */
+  width: 100%;
+  white-space: wrap; /* Prevent text wrapping */
+
+}
+
+/* Style for the table header (th) */
+.dayReport th {
+  background-color: #f2f2f2; /* Background color for header cells */
+  font-weight: bold;
+}
+
 .arrow {
   border: solid;
   border-width: 0 3px 3px 0;

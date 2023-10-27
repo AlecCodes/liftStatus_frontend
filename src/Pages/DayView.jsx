@@ -7,12 +7,11 @@ function DayView(props){
 //STRING TEMPLATE THE STATUS INTO EACH CELLS CLASSNAME FOR COLOR CODING
 //IT SHOULD WORK FOR DAYS W MISSING DATA!
 //WHAT IF I made a row component and passed the lift status to it 
-
     console.log(data)
     return (
         <>
-            <h1>DAY VIEW!</h1>
-            <table>
+            <h1 className="dayDate">{data[0].reportDate.split('T')[0]}</h1>
+            <table className="dayReport">
             <tbody>
                 
                 <tr>
