@@ -14,13 +14,38 @@ function DayView(props){
             <h1>DAY VIEW!</h1>
             <table>
             <tbody>
+                
                 <tr>
-                    
+                    <th>Time</th>
+                    <th>BroadWay Express</th>
+                    <th>Stump Alley Express</th>
+                    <th>Gold Rush Express</th>
+                    <th>Unbound Express</th>
+                    <th>Discovery Express</th>
+                    <th>Chair 12</th>
+                    <th>Chair 13</th>
+                    <th>Chair 14</th>
+                    <th>Chair 23</th>
+                    <th>Panorama Lower</th>
+                    <th>Panorama Upper</th>
+                    <th>Rollercoaster Express</th>
+                    <th>High 5 Express</th>
+                    <th>Chair 7</th>
+                    <th>Chair 8</th>
+                    <th>Canyon Express</th>
+                    <th>Schoolyard Express</th>
+                    <th>Chair 20</th>
+                    <th>Chair 21</th>
+                    <th>Chair 22</th>
+                    <th>Village Gondola</th>
+                    <th>Cloud Nine</th>
+                    <th>Eagle Express</th>
+                    <th>Chair 25</th>
                 </tr>
+
                 {data.map((day, index, arr) => {
                     const mountainTime = new Date(data[index].reportDate)
-
-
+                
                     for (let i=0; i < arr.length; i++){
                         return (
                         <>
