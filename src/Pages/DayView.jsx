@@ -14,41 +14,45 @@ function DayView(props){
             <h1>DAY VIEW!</h1>
             <table>
             <tbody>
+                <tr>
+                    
+                </tr>
                 {data.map((day, index, arr) => {
                     const mountainTime = new Date(data[index].reportDate)
-                    console.log(arr.length)
-
-                    const liftnames = Object.keys(day.chairs)
-                    console.log(liftnames)
-
 
 
                     for (let i=0; i < arr.length; i++){
                         return (
                         <>
                                 <tr key = {i}>
-                                    <td>{mountainTime.toLocaleString()}</td>
-                                    <td>{day.chairs.broadwayExpress}</td>
-                                    <td>{day.chairs.stumpAlleyExpress}</td>
-                                    <td>{day.chairs.unboundExpress}</td>
-                                    <td>{day.chairs.goldRushExpress}</td>
-                                    <td>{day.chairs.discoveryExpress}</td>
-                                    <td>{day.chairs.chair12}</td>
+                                    <td>{mountainTime.toLocaleString().split(',')[1]}</td>
+                                    <td className={`${day.chairs.broadwayExpress}`}>{day.chairs.broadwayExpress}</td>
+                                    <td className={`${day.chairs.stumpAlleyExpress}`}>{day.chairs.stumpAlleyExpress}</td>
+                                    <td className={`${day.chairs.goldRushExpress}`}>{day.chairs.goldRushExpress}</td>
+                                    <td className={`${day.chairs.unboundExpress}`}>{day.chairs.unboundExpress}</td>
+                                    <td className={`${day.chairs.discoveryExpress}`}>{day.chairs.discoveryExpress}</td>
+                                    <td className={`${day.chairs.chair12}`}>{day.chairs.chair12}</td>
+                                    <td className={`${day.chairs.chair13}`}>{day.chairs.chair13}</td>
+                                    <td className={`${day.chairs.chair14}`}>{day.chairs.chair14}</td>
+                                    <td className={`${day.chairs.chair23}`}>{day.chairs.chair23}</td>
+                                    <td className={`${day.chairs.panoramaLower}`}>{day.chairs.panoramaLower}</td>
+                                    <td className={`${day.chairs.panoramaUpper}`}>{day.chairs.panoramaUpper}</td>
+                                    <td className={`${day.chairs.rollerCoasterExpress}`}>{day.chairs.rollerCoasterExpress}</td>
+                                    <td className={`${day.chairs.high5Express}`}>{day.chairs.high5Express}</td>
+                                    <td className={`${day.chairs.chair7}`}>{day.chairs.chair7}</td>
+                                    <td className={`${day.chairs.chair8}`}>{day.chairs.chair8}</td>
+                                    <td className={`${day.chairs.canyonExpress}`}>{day.chairs.canyonExpress}</td>
+                                    <td className={`${day.chairs.schoolyardExpress}`}>{day.chairs.schoolyardExpress}</td>
+                                    <td className={`${day.chairs.chair20}`}>{day.chairs.chair20}</td>
+                                    <td className={`${day.chairs.chair21}`}>{day.chairs.chair21}</td>
+                                    <td className={`${day.chairs.chair22}`}>{day.chairs.chair22}</td>
+                                    <td className={`${day.chairs.villageGondola}`}>{day.chairs.villageGondola}</td>
+                                    <td className={`${day.chairs.cloudNine}`}>{day.chairs.cloudNine}</td>
+                                    <td className={`${day.chairs.eagleExpress}`}>{day.chairs.eagleExpress}</td>
+                                    <td className={`${day.chairs.chair25}`}>{day.chairs.chair25}</td>
                                 </tr>
                         </>)
                     }
-
-                    // for (let i of Object.values(element.chairs)){
-                    //     const mountainTime = new Date(data[index].reportDate)
-                    //     console.log(i)
-                    //     return (
-                    //     <>
-                    //         <tr>
-                    //             <td key ={index}> {mountainTime.toLocaleString().split(',')[1]}</td>
-                    //         </tr>
-                    //     </>
-                    //     )
-                    // }
                 })}
 
                 </tbody>
