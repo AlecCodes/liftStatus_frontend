@@ -12,6 +12,8 @@ function Home(){
             <p>Today's Date: {today.toLocaleDateString()}</p>
 
             <Link to={`showWeek/${sevenDaysAgo}/${today}`}>SEE LAST WEEK</Link>
+            <br></br>
+            <Link to={`showMonth`}>Month View</Link>
             
         </div>
     )
