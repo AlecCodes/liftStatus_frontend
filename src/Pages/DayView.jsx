@@ -7,11 +7,40 @@ function DayView(props){
 //STRING TEMPLATE THE STATUS INTO EACH CELLS CLASSNAME FOR COLOR CODING
 //IT SHOULD WORK FOR DAYS W MISSING DATA!
 //WHAT IF I made a row component and passed the lift status to it 
-    console.log(data)
+//    console.log(data)
+
+    const liftNames = Object.keys(data[0].chairs)
+//    console.log(liftNames)
+
     return (
         <>
             <h1 className="dayDate">{data[0].reportDate.split('T')[0]}</h1>
-            <table className="dayReport">
+            <table>
+            <tbody>
+                {liftNames.map((element,index) => {
+                    return (
+                        <tr>
+                            <td>{element}</td>
+                        </tr>
+                    )
+                })}
+                {data.map((liftReport, index) => {
+                    liftNames.map((lift, index) => {
+                        return (
+                            <tr>
+                                <td>{liftReport.chairs[lift]}</td>
+                            </tr>
+                        )
+                    })
+                })}
+            </tbody>    
+            </table>
+            
+            
+
+
+
+            {/* <table className="dayReport">
             <tbody>
                 
                 <tr>
@@ -80,7 +109,7 @@ function DayView(props){
                 })}
 
                 </tbody>
-            </table>
+            </table> */}
         </>
     )
 }
