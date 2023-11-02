@@ -10,28 +10,34 @@ function DayView(props){
 //    console.log(data)
 
     const liftNames = Object.keys(data[0].chairs)
-//    console.log(liftNames)
 
     return (
         <>
             <h1 className="dayDate">{data[0].reportDate.split('T')[0]}</h1>
             <table>
             <tbody>
-                {liftNames.map((element,index) => {
-                    return (
-                        <tr>
-                            <td>{element}</td>
-                        </tr>
-                    )
-                })}
-                {data.map((liftReport, index) => {
-                    liftNames.map((lift, index) => {
-                        return (
-                            <tr>
-                                <td>{liftReport.chairs[lift]}</td>
-                            </tr>
+                <tr>
+                    <td>liftname</td>
+                    {data.map((liftReport, index) => {
+                        const mountainTime = new Date(liftReport.reportDate)
+                        return(
+                            <td>{mountainTime.toLocaleString("en-US", {timeZone:"America/Los_Angeles"}).split(',')[1]}</td>
                         )
-                    })
+                    })}
+                </tr>
+                {liftNames.map((lift,index) => {
+                    return (
+                        <>
+                        <tr>
+                            <td>{lift}</td>
+                            {data.map((liftReport, index) => {
+                                return (
+                                    <td className={`${liftReport.chairs[lift]}`}>{liftReport.chairs[lift]}</td>   
+                                )
+                            })}
+                        </tr>
+                        </>
+                    )
                 })}
             </tbody>    
             </table>
