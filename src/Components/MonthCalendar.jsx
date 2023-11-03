@@ -1,10 +1,13 @@
 import daysInMonth from "../Functions/daysInMonth"
 import {Link} from "react-router-dom"
+import {useEffect} from "react"
 
 function MonthCalendar(props){
 
     const daysInMonthList = daysInMonth(props.year, props.month)
 
+    
+    
     //this aligns the start of the month on the proper day of week on our calendar
     const firstDay = daysInMonthList[0].getDay()
     const leadingBlankDays = []
