@@ -4,10 +4,12 @@ import {useEffect} from "react"
 
 function MonthCalendar(props){
 
-    const daysInMonthList = daysInMonth(props.year, props.month)
+    const daysInMonthList = daysInMonth(props.day.getFullYear(), props.day.getMonth() + 1)
 
-    
-    
+    useEffect(() => {
+        console.log(props.day)
+    },[props.day])
+     
     //this aligns the start of the month on the proper day of week on our calendar
     const firstDay = daysInMonthList[0].getDay()
     const leadingBlankDays = []

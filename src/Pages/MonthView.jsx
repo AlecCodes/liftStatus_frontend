@@ -34,7 +34,7 @@ function MonthView(props){
                 setToday(newDate)
             }}            
             ></i>
-            <MonthCalendar month = {getToday.getMonth() + 1} year = {getToday.getFullYear()}/>
+            <MonthCalendar day = {getToday}/>
         </>
     )
 }
