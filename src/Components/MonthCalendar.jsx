@@ -1,13 +1,31 @@
 import daysInMonth from "../Functions/daysInMonth"
 import {Link} from "react-router-dom"
 import {useEffect} from "react"
+const URI = 'https://pure-wildwood-05827.herokuapp.com/dateRange/month/'
+
 
 function MonthCalendar(props){
 
-    const daysInMonthList = daysInMonth(props.day.getFullYear(), props.day.getMonth() + 1)
+    //will these variables change as the day prop changes? Should this useffect trigger a statechange for Day instead?
+    let month = props.day.getMonth() + 1 
+    let year = props.day.getFullYear()
+    const daysInMonthList = daysInMonth(year, month)
+
 
     useEffect(() => {
-        console.log(props.day)
+        async function getMonthData(){
+            try{
+                const response = await fetch(URI + `${month}/${year}`)
+                const data = await response.json()
+                console.log(data)
+            }catch(error){
+                console.error("ERROR FETCHTIN OMG", error)
+            }
+        }
+        getMonthData()
+
+        //const response = fetch(URI + `${month}/${year}`)
+
     },[props.day])
      
     //this aligns the start of the month on the proper day of week on our calendar
