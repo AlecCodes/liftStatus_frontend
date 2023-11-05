@@ -14,19 +14,25 @@ function MonthView(props){
 
     const [getToday, setToday] = useState(today)
 
+    //Load everything for current month
     useEffect(() => {
-        console.log("MOUNT")
+        loadMonthData(getToday.getMonth() + 1, getToday.getFullYear())
     }, [])
 
+    //Access the state immediately after calling setToday
+    useEffect(() => {
+        console.log(getToday)
+    }, [getToday])
 
     async function leftClickHandler(e){
+        console.log("CLICKE LEFT")
         const newDate = new Date(getToday)
-        newDate.setMonth(getToday.getMonth() -1)
+        newDate.setMonth(getToday.getMonth() - 1)
         setToday(newDate)
-        loadMonthData(getToday.getMonth(), getToday.getFullYear())
     }
 
     async function rightClickHandler(e){
+        console.log("CLICKE RIGTH")
         const newDate = new Date(getToday)
         newDate.setMonth(getToday.getMonth() + 1)
         setToday(newDate)
