@@ -13,6 +13,7 @@ function MonthView(props){
     const currentYear = today.getFullYear()
 
     const [getToday, setToday] = useState(today)
+    const [getMonthDataState, setMonthDataState] = useState(null)
 
     //Load everything for current month
     useEffect(() => {
@@ -22,6 +23,7 @@ function MonthView(props){
     //Access the state immediately after calling setToday
     useEffect(() => {
         console.log(getToday)
+        loadMonthData(getToday.getMonth() + 1, getToday.getFullYear())
     }, [getToday])
 
     async function leftClickHandler(e){
