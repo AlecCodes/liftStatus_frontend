@@ -15,15 +15,16 @@ function MonthView(props){
     const [getToday, setToday] = useState(today)
     const [getMonthDataState, setMonthDataState] = useState(null)
 
-    //Load everything for current month
+    //Load everything for current month upon component mount
+    //'mount' might happen 4 times?
     useEffect(() => {
         loadMonthData(getToday.getMonth() + 1, getToday.getFullYear())
     }, [])
 
     //Access the state immediately after calling setToday
     useEffect(() => {
-        console.log(getToday)
         loadMonthData(getToday.getMonth() + 1, getToday.getFullYear())
+            .then((data) => setMonthDataState(data))
     }, [getToday])
 
     async function leftClickHandler(e){
@@ -51,7 +52,7 @@ function MonthView(props){
             <i className="arrow right"
             onClick = {rightClickHandler}            
             ></i>
-            <MonthCalendar day = {getToday}/>
+            <MonthCalendar day = {getToday} monthData = {getMonthDataState}/>
         </>
     )
 }

@@ -12,8 +12,6 @@ function MonthCalendar(props){
     let year = props.day.getFullYear()
     const daysInMonthList = daysInMonth(year, month)
 
-    
-    
     //this aligns the start of the month on the proper day of week on our calendar
     const firstDay = daysInMonthList[0].getDay()
     const leadingBlankDays = []

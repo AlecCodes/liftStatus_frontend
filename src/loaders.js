@@ -19,7 +19,7 @@ export async function loadMonthData(month, year){
     try{
         const response = await fetch(URI + `/month/${month}/${year}`)
         const data = await response.json()
-        console.log(data)
+    //    console.log(data)
         return data
     }catch(error){
         console.error("ERROR FETCHTIN OMG", error)
