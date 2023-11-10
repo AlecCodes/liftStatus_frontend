@@ -2,12 +2,10 @@ import daysInMonth from "../Functions/daysInMonth"
 import {Link} from "react-router-dom"
 import {useEffect, useState} from "react"
 const URI = 'https://pure-wildwood-05827.herokuapp.com/dateRange/month/'
-
+import { dayReportCard } from "../Functions/dayReportCard"
 
 function MonthCalendar(props){
 
-    //will these variables change as the day prop changes? Should this useffect trigger a statechange for Day instead?
-    //Lets try loading the data up in the component hierachy, and hand it down to child
     let month = props.day.getMonth() + 1 
     let year = props.day.getFullYear()
     const daysInMonthList = daysInMonth(year, month)
@@ -19,6 +17,8 @@ function MonthCalendar(props){
         leadingBlankDays.push(<li key ={i} >&nbsp;</li>)
     }
     
+    
+    dayReportCard(props.monthData)
     
     //We use CSS
     return (
