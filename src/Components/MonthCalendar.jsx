@@ -16,10 +16,7 @@ function MonthCalendar(props){
     for (let i = 0; i < firstDay; i++){
         leadingBlankDays.push(<li key ={i} >&nbsp;</li>)
     }
-    
-    
-    dayReportCard(props.monthData)
-    
+        
     //We use CSS
     return (
         <>

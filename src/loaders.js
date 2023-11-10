@@ -15,13 +15,10 @@ export async function dayLoader({params}){
     return data
 }
 
-export async function loadMonthData(month, year){
-    try{
-        const response = await fetch(URI + `/month/${month}/${year}`)
-        const data = await response.json()
-    //    console.log(data)
-        return data
-    }catch(error){
-        console.error("ERROR FETCHTIN OMG", error)
-    }
+export async function loadMonthData({params}){
+    const response = await fetch(URI + `/month/${params.month}/${params.year}`)
+    const data = await response.json()
+    console.log(data)
+    return data
+
 }
