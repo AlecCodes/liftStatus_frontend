@@ -1,6 +1,6 @@
 //react router or react router dom??
 import { useLoaderData, useParams, Link} from "react-router-dom"
-
+import MonthCalendar from "../Components/MonthCalendar"
 
 export function MonthPage(props){
     const data = useLoaderData()
@@ -20,10 +20,11 @@ export function MonthPage(props){
             <Link
             to = {`/showMonth/${previousMonthDate.getMonth()}/${previousMonthDate.getFullYear()}`}
             ><i>Left</i></Link>
-            <i>{month}/{year}</i>
+            <i>Current Month</i>
             <Link
             to = {`/showMonth/${nextMonthDate.getMonth()}/${nextMonthDate.getFullYear()}`}
             ><i>Right</i></Link>
+            <MonthCalendar day = {currentMonthDate} data = {data}/>
         </>
     )
 }
