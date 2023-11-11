@@ -13,7 +13,7 @@ function Home(){
 
             <Link to={`showWeek/${sevenDaysAgo}/${today}`}>SEE LAST WEEK</Link>
             <br></br>
-            <Link to={`showMonth`}>Month View</Link>
+            <Link to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Month View</Link>
             
         </div>
     )
