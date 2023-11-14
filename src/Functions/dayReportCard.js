@@ -17,10 +17,9 @@ export function dayReportCard(monthData, day){
     })
 
     const grade = (openCount / closedCount) * 100
-    
-    let letterGrade = 'D-'
+    let letterGrade;
 
-    switch (grade) {
+    switch (true) {
         case (grade >= 97):
             letterGrade = 'A+'
             break;
@@ -57,7 +56,11 @@ export function dayReportCard(monthData, day){
         case (grade < 65):
             letterGrade = 'D-'
             break;
+        case (grade == NaN):
+            letterGrade = 'No Data'
+            break;
         }
 
+    console.log(letterGrade)
     return (letterGrade)
 }
