@@ -5,8 +5,6 @@ const URI = 'https://pure-wildwood-05827.herokuapp.com/dateRange/month/'
 import { dayReportCard } from "../Functions/dayReportCard"
 
 function MonthCalendar(props){
-    dayReportCard(props.data, 1)
-
     //0 indexed 
     let month = props.day.getMonth() 
     let year = props.day.getFullYear()
@@ -37,7 +35,7 @@ function MonthCalendar(props){
                     return(<li
                     key={index}
                     >
-                        <Link to={`../showDay/${date.toISOString()}`}>{date.toLocaleDateString()}</Link>
+                        <Link to={`../showDay/${date.toISOString()}`}>{date.toLocaleDateString()} {dayReportCard(props.data, date.getDate())}</Link>
                     </li>)
                 })}
             </ul>
