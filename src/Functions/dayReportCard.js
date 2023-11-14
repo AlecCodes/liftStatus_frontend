@@ -53,7 +53,7 @@ export function dayReportCard(monthData, day){
         case (grade < 67 && grade >= 65):
             letterGrade = 'D'
             break;
-        case (grade < 65):
+        case (grade < 10):
             letterGrade = 'D-'
             break;
     }
