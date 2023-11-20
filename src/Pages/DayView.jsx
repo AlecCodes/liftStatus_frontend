@@ -11,7 +11,9 @@ function DayView(props){
 //    console.log(data)
     const tomorrow = new Date(day)
     tomorrow.setDate(tomorrow.getDate() + 1)
-    console.log(tomorrow.toISOString())
+
+    const yesterday = new Date(day)
+    yesterday.setDate(yesterday.getDate() - 1)
 
 
 
@@ -23,8 +25,11 @@ function DayView(props){
         <>
             <h1 className="dayDate">{data[0].reportDate.split('T')[0]}</h1>
             <Link
+            to = {`../../showDay/${yesterday.toISOString()}`}
+            >YESTERDAY </Link>
+            <Link
             to = {`../../showDay/${tomorrow.toISOString()}`}
-            >TOMORROW</Link>
+            > TOMORROW</Link>
             <table>
             <tbody>
                 <tr>
