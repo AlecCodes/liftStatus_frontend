@@ -11,13 +11,20 @@
   background-color: green;
 }
 
-.Expected{
+.Expected, .Mechanical, .Delayed{
   background-color: yellow;
   color: black;
+  width: 80px;
 }
 
 .Foot{
   background-color: purple;
+  width: 80px;
+}
+
+.Weather{
+  width: 55px;
+  background-color: orange;
 }
 
 .dayReport th, .dayReport td {
