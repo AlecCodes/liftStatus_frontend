@@ -23,37 +23,37 @@ export function dayReportCard(monthData, day){
         case (grade >= 97):
             letterGrade = 'A+'
             break;
-        case (grade < 97 && grade >= 93):
+        case (grade < 97 && grade >= 90):
             letterGrade = 'A'
             break;
-        case (grade < 93 && grade >= 90):
+        case (grade < 90 && grade >= 83):
             letterGrade = 'A-'
             break;
-        case (grade < 90 && grade >= 87):
+        case (grade < 87 && grade >= 80):
             letterGrade = 'B+'
             break; 
-        case (grade < 87 && grade >= 83):
+        case (grade < 80 && grade >= 73):
             letterGrade = 'B'
             break;    
-        case (grade < 83 && grade >= 80):
+        case (grade < 73 && grade >= 66):
             letterGrade = 'B-'
             break;
-        case (grade < 80 && grade >= 77):
+        case (grade < 66 && grade >= 59):
             letterGrade = 'C+'
             break;
-        case (grade < 77 && grade >= 73):
+        case (grade < 59 && grade >= 52):
             letterGrade = 'C'
             break;
-        case (grade < 73 && grade >= 70):
+        case (grade < 52 && grade >= 45):
             letterGrade = 'C-'
             break;      
-        case (grade < 70 && grade >= 67):
+        case (grade < 45 && grade >= 38):
             letterGrade = 'D+'
             break;
-        case (grade < 67 && grade >= 65):
+        case (grade < 38 && grade >= 31):
             letterGrade = 'D'
             break;
-        case (grade < 10):
+        case (grade < 31):
             letterGrade = 'D-'
             break;
     }
