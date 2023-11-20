@@ -11,6 +11,15 @@
   background-color: green;
 }
 
+.Expected{
+  background-color: yellow;
+  color: black;
+}
+
+.Foot{
+  background-color: purple;
+}
+
 .dayReport th, .dayReport td {
   border: 1px solid #ccc; /* Add borders to cells */
   padding: 8px; /* Add padding to cells for spacing */
