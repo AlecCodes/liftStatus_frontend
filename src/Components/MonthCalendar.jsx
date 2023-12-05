@@ -17,7 +17,6 @@ function MonthCalendar(props){
         leadingBlankDays.push(<li key ={i} >&nbsp;</li>)
     }
     
-    console.log(dayReportCard(props.data, 22))
 
     //We use CSS
     return (
