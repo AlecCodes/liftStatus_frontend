@@ -6,7 +6,7 @@
 - The backend is saving the results in UTC. This is a problem, because on the last day of a month, 4PM is timestamped on the _next day_ because UTC is a different timezone from California. If we can't find a workaround for the date range endpoints, then we may need to change the backend to save the dates in westcoast time instead of UTC.
 - The last hour of the previous day is coming up as the first hour when you click a day. ~~This is likely caused by the showDay endpoint~~ ~~This seems to be because of the frontend converting the ISO date to locale date causes overlap. I'm going to save California time instead to the DB. Wish me luck.~~ NO This is is caused by Daylight savings time! What if we fixed this by making the get day endpoint search by mammoth time parameters rather than UTC Parameters? We fixed it by widening out the time frame to better accomodate DST ending
 
-- The Date Grade doesn't work properly, it's not capturing certain value ranges, such as days with actually open lifts
+- Dayview cannot load days for which the data doesn't contain the weather data
 
 ---------
 
