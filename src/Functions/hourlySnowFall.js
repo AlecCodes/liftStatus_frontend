@@ -1,4 +1,4 @@
-export function hourlySnowFall(arr){
+export function getHourlySnowFall(arr){
     //console.log(arr)
     let result = []
     for (let i = 1; i < arr.length; i++){   
@@ -9,5 +9,5 @@ export function hourlySnowFall(arr){
         })
 
     }
-    console.log(result)
+    return result;
 }

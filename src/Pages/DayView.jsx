@@ -1,6 +1,6 @@
 import { useLoaderData , useParams, Link} from "react-router-dom"
 import { dummyData } from "../dummySnowData"
-import { hourlySnowFall } from "../Functions/hourlySnowFall"
+import { getHourlySnowFall } from "../Functions/hourlySnowFall"
 
 
 function DayView(props){
@@ -14,12 +14,12 @@ function DayView(props){
     const yesterday = new Date(day)
     yesterday.setDate(yesterday.getDate() - 1)
 
-    hourlySnowFall(dummyData)
+    console.log(getHourlySnowFall(dummyData))
     
 
     //Get each hour snowfall
     const snowfallOnly = data.map((element) => element.snowReport)
-
+    const hourlySnowFall = getHourlySnowFall(snowfallOnly)
 
 
     const liftNames = Object.keys(data[0].chairs)
@@ -46,26 +46,26 @@ function DayView(props){
                     })}
                 </tr>
                 <tr>
-                    <td>Base Area last 24hr</td>
-                    {data.map((liftReport, index) => {
+                    <td>Base</td>
+                    {hourlySnowFall.map((snowReport, index) => {
                         return (<td>
-                            {liftReport.snowReport.BaseAreaLast24h}
+                            {(snowReport.base >=0) ? snowReport.base : 0}"
                         </td>)
                     })}
                 </tr>
                 <tr>
-                    <td>Mid mountain last 24hr</td>
-                    {data.map((liftReport, index) => {
+                    <td>Mid mountain</td>
+                    {hourlySnowFall.map((snowReport, index) => {
                         return (<td>
-                            {liftReport.snowReport.MidMountainAreaLast24h}
+                            {(snowReport.mid >=0) ? snowReport.mid : 0}"
                         </td>)
                     })}
                 </tr>
                 <tr>
-                    <td>Summit Area last 24hr</td>
-                    {data.map((liftReport, index) => {
+                    <td>Summit</td>
+                    {hourlySnowFall.map((snowReport, index) => {
                         return (<td>
-                            {liftReport.snowReport.SummitAreaLast24h}
+                            {(snowReport.summit >=0) ? snowReport.summit : 0}"
                         </td>)
                     })}
                 </tr>
