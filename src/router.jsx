@@ -12,7 +12,7 @@ import { MonthPage } from "./Pages/MonthPage";
 const router = createBrowserRouter(createRoutesFromElements(
     <>
         <Route path ="/" element={<App/>}>
-            <Route path = "" element={<Home/>}/>
+            <Route path = "" element={<Home/>} loader={loadMonthData}/>
             <Route path = "showWeek/:start/:end" element={<WeekView/>} loader ={pastWeekLoader}/>
             <Route path="showMonth/:month/:year" element={<MonthPage/>} loader = {loadMonthData}/>
             <Route path = "showMonth" element={<MonthView/>} />
