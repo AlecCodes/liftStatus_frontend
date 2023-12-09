@@ -66,6 +66,7 @@
   background: orangered;
   margin: 0;
 }
+
 .weekdays li{
   list-style-type: none;
   display: inline-block;
@@ -89,9 +90,11 @@
   text-align: left;
   font-size: 12px;
 }
+
 /* Calendar Media Queries */
 @media screen and (max-width: 768px){
   .days li {
+    vertical-align: top;
     width: 13%;
     font-size: 6px;
     text-wrap: wrap;
