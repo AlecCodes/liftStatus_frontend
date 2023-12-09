@@ -11,12 +11,12 @@ function Home(){
     return (
         <div className='landingPageContainer'>
             <div className='landingPageIsland'>
-                <p>Today's Date: {today.toLocaleDateString()}</p>
+                <Link
+                    id='enterButton' 
+                    to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Enter</Link>
 
-                <Link to={`showWeek/${sevenDaysAgo}/${today}`}>SEE LAST WEEK</Link>
-                <br></br>
+                <p>by Alec Hannaford | Today's Date: {today.toLocaleDateString()}</p>
                 
-                <Link to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Month View</Link>
             </div>
         </div>
     )

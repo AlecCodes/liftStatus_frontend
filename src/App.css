@@ -1,3 +1,4 @@
+/* landing page */
 .landingPageContainer{
   display: flex;
   justify-content: center;
@@ -6,7 +7,6 @@
   width: 100vw;
   background-image: url("https://sc.mammothmountain.com/-/media/project/mammoth/library/brand/crown-superhero/2019-03-25_mm_pm_heli_774_crown_2400x1350.jpg?h=1350&iar=0&w=2400&rev=bd82d076b77a41568b615167fe04ca2d&hash=68CF8AFB68F1C5134421DC51E11D9858");
   background-size: 150%;
-
   background-position: 60% 10%;
 }
 
@@ -14,7 +14,30 @@
   background-color: white;
   border: solid;
   padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
+
+#enterButton{
+  justify-self:center;
+  background-color: #007bff;
+  padding: 7%;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+}
+
+.landingPageIsland p{
+}
+
+
+#enterButton:hover{
+  background-color: #0056b3;
+}
+
 
 .header{
   background-color: #888;
@@ -131,6 +154,10 @@
 
 /* Calendar Media Queries */
 @media screen and (max-width: 768px){
+
+  .landingPageContainer{
+    background-image: url('https://en.wikipedia.org/wiki/Mammoth_Mountain_Ski_Area#/media/File:RIDGE.JPG');
+  }
 
   #headerTitle {
     font-size: 11px;
