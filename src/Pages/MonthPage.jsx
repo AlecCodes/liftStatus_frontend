@@ -15,8 +15,9 @@ export function MonthPage(props){
     nextMonthDate.setMonth(currentMonthDate.getMonth() + 1)
 
     return (
-        <>  <div>
-                <div>
+        <>  
+            <div className="monthNavContainer">
+                <div className="monthNav">
                 <Link
                 to = {`/showMonth/${previousMonthDate.getMonth()}/${previousMonthDate.getFullYear()}`}
                 ><i>Left</i></Link>

@@ -4,6 +4,15 @@
   display: flex;
 }
 
+.monthNavContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.monthNav{
+
+}
+
 .dayReport {
   border-collapse: collapse;
   width: 100%;
