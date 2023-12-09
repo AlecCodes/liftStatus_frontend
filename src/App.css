@@ -61,6 +61,10 @@
 
 
 /* Calendar */
+#reportcardLinebreak{
+  display: none;
+}
+
 .weekdays{
   padding: 10px 0;
   background: orangered;
@@ -93,6 +97,9 @@
 
 /* Calendar Media Queries */
 @media screen and (max-width: 768px){
+  #reportcardLinebreak{
+    display: unset;
+  }
   .days li {
     vertical-align: top;
     width: 13%;

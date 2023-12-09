@@ -36,7 +36,10 @@ function MonthCalendar(props){
                     return(<li
                     key={index}
                     >
-                        <Link to={`../showDay/${date.toISOString()}`}>{date.toLocaleDateString()} {dayReportCard(props.data, date.getDate())}</Link>
+                        <Link to={`../showDay/${date.toISOString()}`}>{date.toLocaleDateString()} 
+                            <br id="reportcardLinebreak"/>
+                            {" " + dayReportCard(props.data, date.getDate())}
+                        </Link>
                     </li>)
                 })}
             </ul>
