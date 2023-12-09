@@ -5,8 +5,9 @@
   height: 100vh;
   width: 100vw;
   background-image: url("https://sc.mammothmountain.com/-/media/project/mammoth/library/brand/crown-superhero/2019-03-25_mm_pm_heli_774_crown_2400x1350.jpg?h=1350&iar=0&w=2400&rev=bd82d076b77a41568b615167fe04ca2d&hash=68CF8AFB68F1C5134421DC51E11D9858");
-  background-size: cover;
-  background-position: center;
+  background-size: 150%;
+
+  background-position: 60% 10%;
 }
 
 .landingPageIsland{
