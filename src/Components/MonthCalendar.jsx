@@ -20,7 +20,7 @@ function MonthCalendar(props){
 
     //We use CSS
     return (
-        <>
+        <div className="Calendar">
             <ul className="weekdays">
                 <li>Sun</li>
                 <li>Mon</li>
@@ -43,7 +43,7 @@ function MonthCalendar(props){
                     </li>)
                 })}
             </ul>
-        </>
+        </div>
     )
 }
 

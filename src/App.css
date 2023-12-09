@@ -1,3 +1,9 @@
+.header{
+  background-color: #888;
+  width: 100%;
+  display: flex;
+}
+
 .dayReport {
   border-collapse: collapse;
   width: 100%;
@@ -61,6 +67,11 @@
 
 
 /* Calendar */
+
+.Calendar{
+  margin: 3%;
+}
+
 #reportcardLinebreak{
   display: none;
 }
@@ -97,6 +108,11 @@
 
 /* Calendar Media Queries */
 @media screen and (max-width: 768px){
+
+  #headerTitle {
+    font-size: 11px;
+  }
+
   #reportcardLinebreak{
     display: unset;
   }
@@ -109,11 +125,12 @@
 }
 
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-}
+  padding: 2rem; */
+  }
 
+/* 
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -134,8 +151,8 @@
   to {
     transform: rotate(360deg);
   }
-}
-
+} */
+/* 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -148,4 +165,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */

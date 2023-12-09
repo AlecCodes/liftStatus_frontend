@@ -15,15 +15,17 @@ export function MonthPage(props){
     nextMonthDate.setMonth(currentMonthDate.getMonth() + 1)
 
     return (
-        <>
-            <h1>New Month Page</h1>
-            <Link
-            to = {`/showMonth/${previousMonthDate.getMonth()}/${previousMonthDate.getFullYear()}`}
-            ><i>Left</i></Link>
-            <i>Current Month</i>
-            <Link
-            to = {`/showMonth/${nextMonthDate.getMonth()}/${nextMonthDate.getFullYear()}`}
-            ><i>Right</i></Link>
+        <>  <div>
+                <div>
+                <Link
+                to = {`/showMonth/${previousMonthDate.getMonth()}/${previousMonthDate.getFullYear()}`}
+                ><i>Left</i></Link>
+                <i>Current Month</i>
+                <Link
+                to = {`/showMonth/${nextMonthDate.getMonth()}/${nextMonthDate.getFullYear()}`}
+                ><i>Right</i></Link>
+                </div>
+            </div>
             <MonthCalendar day = {currentMonthDate} data = {data}/>
         </>
     )

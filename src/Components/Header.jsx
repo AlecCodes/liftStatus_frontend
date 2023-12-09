@@ -1,5 +1,11 @@
 function Header(props){
-    return (<h1>Mammoth Report Tracker V1!!</h1>)
+    return (
+    <div className="header">
+        <h1
+        id="headerTitle"
+        >Mammoth Report Tracker V1!!</h1>
+    </div>
+    )
 }
 
 export default Header;
