@@ -9,14 +9,15 @@ function Home(){
 
 
     return (
-        <div className='landingPage'>
-            <p>Today's Date: {today.toLocaleDateString()}</p>
+        <div className='landingPageContainer'>
+            <div className='landingPageIsland'>
+                <p>Today's Date: {today.toLocaleDateString()}</p>
 
-            <Link to={`showWeek/${sevenDaysAgo}/${today}`}>SEE LAST WEEK</Link>
-            <br></br>
-            
-            <Link to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Month View</Link>
-            
+                <Link to={`showWeek/${sevenDaysAgo}/${today}`}>SEE LAST WEEK</Link>
+                <br></br>
+                
+                <Link to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Month View</Link>
+            </div>
         </div>
     )
 }

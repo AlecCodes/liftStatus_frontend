@@ -1,6 +1,7 @@
 //react router or react router dom??
 import { useLoaderData, useParams, Link} from "react-router-dom"
 import MonthCalendar from "../Components/MonthCalendar"
+import Header from "../Components/Header"
 
 export function MonthPage(props){
     const data = useLoaderData()
@@ -16,6 +17,7 @@ export function MonthPage(props){
 
     return (
         <>  
+            <Header/>
             <div className="monthNavContainer">
                 <div className="monthNav">
                 <Link
