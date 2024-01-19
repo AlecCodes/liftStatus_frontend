@@ -1,3 +1,5 @@
+//OBSOLETE - snowfall level not updated on an hourly rolling basis
+
 export function getHourlySnowFall(arr){
     //console.log(arr)
     let result = []

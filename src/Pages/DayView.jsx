@@ -14,14 +14,8 @@ function DayView(props){
     const yesterday = new Date(day)
     yesterday.setDate(yesterday.getDate() - 1)
 
-    console.log(getHourlySnowFall(dummyData))
+//    console.log(getHourlySnowFall(dummyData))
     
-
-    //Get each hour snowfall
-    const snowfallOnly = data.map((element) => element.snowReport)
-    const hourlySnowFall = getHourlySnowFall(snowfallOnly)
-
-
     const liftNames = Object.keys(data[0].chairs)
 
 
@@ -37,36 +31,12 @@ function DayView(props){
             <table>
             <tbody>
                 <tr>
-                    <td>liftname</td>
+                    <td>Mountain Time</td>
                     {data.map((liftReport, index) => {
                         const mountainTime = new Date(liftReport.reportDate)
                         return(
                             <td>{mountainTime.toLocaleString("en-US", {timeZone:"America/Los_Angeles"}).split(',')[1]}</td>
                         )
-                    })}
-                </tr>
-                <tr>
-                    <td>Base</td>
-                    {hourlySnowFall.map((snowReport, index) => {
-                        return (<td>
-                            {(snowReport.base >=0) ? snowReport.base : 0}"
-                        </td>)
-                    })}
-                </tr>
-                <tr>
-                    <td>Mid mountain</td>
-                    {hourlySnowFall.map((snowReport, index) => {
-                        return (<td>
-                            {(snowReport.mid >=0) ? snowReport.mid : 0}"
-                        </td>)
-                    })}
-                </tr>
-                <tr>
-                    <td>Summit</td>
-                    {hourlySnowFall.map((snowReport, index) => {
-                        return (<td>
-                            {(snowReport.summit >=0) ? snowReport.summit : 0}"
-                        </td>)
                     })}
                 </tr>
                 {liftNames.map((lift,index) => {
