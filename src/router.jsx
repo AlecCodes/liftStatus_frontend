@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import {pastWeekLoader, dayLoader, loadMonthData} from "./loaders"
 import DayView from "./Pages/DayView";
 import { MonthPage } from "./Pages/MonthPage";
+import MapView from "./Pages/MapView";
 
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route path="showMonth/:month/:year" element={<MonthPage/>} loader = {loadMonthData}/>
             <Route path = "showMonth" element={<MonthView/>} />
             <Route path = "showDay/:day" element = {<DayView/>} loader = {dayLoader}/>
+            <Route path = "mapView" element={<MapView/>} />
         </Route>
     </>
 ))
