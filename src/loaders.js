@@ -18,7 +18,7 @@ export async function dayLoader({params}){
 export async function loadMonthData({params}){
     const response = await fetch(URI + `/month/${params.month}/${params.year}`)
     const data = await response.json()
-//    console.log(data)
+    console.log(data)
     return data
 
 }
