@@ -2,7 +2,7 @@ import {Link, useLoaderData} from 'react-router-dom'
 
 function Home(){
     const snapshot = useLoaderData()
-    console.log(snapshot)
+//    console.log(snapshot)
     
     
     const today = new Date()
@@ -21,7 +21,7 @@ function Home(){
                     to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Enter</Link>
 
                 <Link
-                to={`mapView/${snapshot._id}}`}
+                to={`mapView/${snapshot._id}`}
                 >
                 See Lift status
                 </Link>

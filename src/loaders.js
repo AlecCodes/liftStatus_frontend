@@ -4,6 +4,13 @@ import { useParams } from "react-router-dom"
 const URI = 'https://pure-wildwood-05827.herokuapp.com/dateRange'
 
 
+export async function idLoader({params}){
+    console.log(params.id)
+    const response = await fetch(URI + `/getById/${params.id}`)
+    const data = response.json()
+    return data
+}
+
 export async function snapshotLoader(){
     return await fetch("https://pure-wildwood-05827.herokuapp.com/snapshot")
 }

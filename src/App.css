@@ -1,3 +1,9 @@
+/* Lift Map */
+#liftMap{
+  width: 80%;
+}
+
+
 /* landing page */
 .landingPageContainer{
   display: flex;
