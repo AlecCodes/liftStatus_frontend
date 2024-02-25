@@ -1,7 +1,7 @@
 # Mammoth Calendar
 
 ## Ideas
-- map component accepts id via params, then calls to endpoint to load report via id
+- map component accepts id via params, then calls to endpoint to load report via id. This means that on the landing page, we should query our db for the most current report. This way, all the map component needs is a object id, and it can find the relevant lift report.
 
 
 ## problems
