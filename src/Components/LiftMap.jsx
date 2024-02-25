@@ -1,11 +1,21 @@
 function LiftMap(props){
-    console.log(props.liftReportData)
+
+    const data = props.liftReportData.chairs
+    console.log(data)
+
+
+
     return(
         <>
             <h1>LIFTMAPP</h1>
-            <div>
+            <div className="map-container">
                 <img id = "liftMap" src="https://imgur.com/I4yb0G5.png"/>
-                <div className="chairliftBars"></div>
+                <div 
+                id={`${data.cloudNine}`} 
+                className={`cloudNine chairliftBar`}></div>
+                <div 
+                id={`${data.chair25}`}
+                className={`chair25 charliftBar`}></div>
             </div>
             
         </>
