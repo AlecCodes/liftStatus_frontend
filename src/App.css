@@ -42,7 +42,23 @@
   transform: rotate(55deg);
 }
 
+.eagleExpress::before{
+  content: "";
+  position: absolute;
+  background-color: #ff0000; 
+  width: 2px; 
+  top: 56.5%;
+  left: 15%;
+  height: 41%;
+  transform: rotate(45deg);
+}
 
+.eagleExpress::before{
+  top: 56.5%;
+  left: 15%;
+  height: 41%;
+  transform: rotate(45deg);
+}
 
 .map-container {
   position: relative;
