@@ -108,9 +108,9 @@
   position: absolute;
   background-color: #ff0000; 
   width: 3px;
-  top: 29%;
+  top: 31%;
   left: 71%;
-  height: 17%;
+  height: 15%;
   transform: rotate(-69.3deg);
 }
 
@@ -168,6 +168,62 @@
   height: 50%;
   transform: rotate(-46deg);
 }
+
+.high5Express::before{
+  content: "";
+  position: absolute;
+  background-color: #ff0000; 
+  width: 3px;
+  top: 26%;
+  left: 38.8%;
+  height: 31%;
+  transform: rotate(-36deg);
+}
+
+.faceLiftExpress::before{
+  content: "";
+  position: absolute;
+  background-color: #ff0000; 
+  width: 3px;
+  top: 27%;
+  left: 46.4%;
+  height: 20%;
+  transform: rotate(-35.3deg);
+}
+
+.chair23::before{
+  content: "";
+  position: absolute;
+  background-color: #ff0000; 
+  width: 3px;
+  top: 18%;
+  left: 53.8%;
+  height: 23%;
+  transform: rotate(-11.3deg);
+}
+
+.panoramaUpper::before{
+  content: "";
+  position: absolute;
+  background-color: #ff0000; 
+  width: 3px;
+  top: 11%;
+  left: 43%;
+  height: 41%;
+  transform: rotate(-38deg);
+}
+
+.panoramaLower::before{
+  content: "";
+  position: absolute;
+  background-color: #ff0000; 
+  width: 3px;
+  top: 41%;
+  left: 55%;
+  height: 37%;
+  transform: rotate(-51deg);
+}
+
 
 .discoveryExpress::before{
   content: "";
@@ -235,8 +291,7 @@
   height: 18%;
   transform: rotate(63deg);
 }
-
-
+ 
 .map-container {
   position: relative;
   display: inline-block;
