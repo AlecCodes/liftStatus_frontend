@@ -7,11 +7,11 @@ function MapView(){
     const data = useLoaderData()
     console.log(data)
 
-
+    const mountainTime = new Date(data.reportDate)
 
     return (
         <>
-            <h1>Lift Status as of {data.reportDate}</h1>
+            <h1>Lift Status as of {mountainTime.toLocaleString()}</h1>
             <LiftMap liftReportData = {data} />
         </>
         

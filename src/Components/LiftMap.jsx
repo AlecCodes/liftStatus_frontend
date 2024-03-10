@@ -8,7 +8,6 @@ function LiftMap(props){
 
     return(
         <>
-            <h1>LIFTMAPP</h1>
             <div className="map-container">
                 <img id = "liftMap" src="https://imgur.com/I4yb0G5.png"/>
                 {/* Could we dynamically create these divs? */}

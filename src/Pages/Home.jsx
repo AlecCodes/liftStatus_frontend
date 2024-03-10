@@ -16,15 +16,18 @@ function Home(){
     return (
         <div className='landingPageContainer'>
             <div className='landingPageIsland'>
-                <Link
-                    id='enterButton' 
-                    to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Enter</Link>
+                <div>
+                    <Link
+                        id='landingButton' 
+                        to={`showMonth/${today.getMonth() + 1}/${today.getFullYear()}`}>Lift History</Link>
 
-                <Link
-                to={`mapView/${snapshot._id}`}
-                >
-                See Lift status
-                </Link>
+                    <Link
+                    id='landingButton'
+                    to={`mapView/${snapshot._id}`}
+                    >
+                    Live Lift Map
+                    </Link>
+                </div>
 
                 <p>by Alec Hannaford | Today's Date: {today.toLocaleDateString()}</p>
                 
