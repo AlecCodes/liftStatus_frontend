@@ -13,8 +13,11 @@ function DayView(props){
     tomorrow.setDate(tomorrow.getDate() + 1)
     const yesterday = new Date(day)
     yesterday.setDate(yesterday.getDate() - 1)
+    const today = new Date()
 
-//    console.log(getHourlySnowFall(dummyData))
+    const isTomorrow = tomorrow < today;
+    console.log(isTomorrow)
+
     
     const liftNames = Object.keys(data[0].chairs)
 
@@ -25,9 +28,13 @@ function DayView(props){
             <Link
             to = {`../../showDay/${yesterday.toISOString()}`}
             >YESTERDAY </Link>
+
+            {
+            isTomorrow && 
             <Link
             to = {`../../showDay/${tomorrow.toISOString()}`}
             > TOMORROW</Link>
+            }
             <table>
             <tbody>
                 <tr>
