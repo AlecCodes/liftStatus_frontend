@@ -8,6 +8,7 @@ function MonthCalendar(props){
     //0 indexed 
     let month = props.day.getMonth() 
     let year = props.day.getFullYear()
+    const today = new Date()
     const daysInMonthList = daysInMonth(year, month)
 
     //this aligns the start of the month on the proper day of week on our calendar
@@ -36,7 +37,8 @@ function MonthCalendar(props){
                     return(<li
                     key={index}
                     >
-                        <Link to={`../showDay/${date.toISOString()}`}>{date.toLocaleDateString()} 
+                        <Link to={(today > date) ? `../showDay/${date.toISOString()}`: `` }>
+                            {date.toLocaleDateString()} 
                             <br id="reportcardLinebreak"/>
                             {" " + dayReportCard(props.data, date.getDate())}
                         </Link>
